@@ -1,5 +1,8 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 from flask import Flask, request, jsonify
-import flask_excel
+import flask_excel as excel
 
 
 app = Flask(__name__)
@@ -12,7 +15,7 @@ def upload_file():
     return '''
     <!doctype html>
     <title>Upload an excel file</title>
-    <h1>Excel file upload (csv, tsv, csvz, tsvz only)</h1>
+    <h1>Excel file upload (csv, tsv, csvz, xlsx, tsvz only)</h1>
     <form action="" method=post enctype=multipart/form-data><p>
     <input type=file name=file><input type=submit value=Upload>
     </form>
@@ -30,10 +33,10 @@ def export_records():
                                           file_name="export_data")
 
 
-# @app.route("/download_file_named_in_unicode", methods=['GET'])
-# def download_file_named_in_unicode():
-#     return excel.make_response_from_array([[1, 2], [3, 4]], "csv",
-#                                           file_name=u"中文文件名")
+@app.route("/download_file_named_in_unicode", methods=['GET'])
+def download_file_named_in_unicode():
+    return excel.make_response_from_array([[1, 2], [3, 4]], "csv",
+                                          file_name=u"中文文件名")
 
 
 # insert database related code here
