@@ -1,5 +1,6 @@
 from flask import Flask, request, jsonify
-import flask_excel as excel
+import flask_excel
+
 
 app = Flask(__name__)
 
@@ -29,10 +30,10 @@ def export_records():
                                           file_name="export_data")
 
 
-@app.route("/download_file_named_in_unicode", methods=['GET'])
-def download_file_named_in_unicode():
-    return excel.make_response_from_array([[1, 2], [3, 4]], "csv",
-                                          file_name=u"中文文件名")
+# @app.route("/download_file_named_in_unicode", methods=['GET'])
+# def download_file_named_in_unicode():
+#     return excel.make_response_from_array([[1, 2], [3, 4]], "csv",
+#                                           file_name=u"中文文件名")
 
 
 # insert database related code here
