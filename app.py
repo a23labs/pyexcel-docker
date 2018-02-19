@@ -7,10 +7,10 @@ app = Flask(__name__)
 @app.route("/upload", methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
-        return jsonify({"result": request.get_array(field_name='file')})
+        return jsonify({"result": request.get_dict(field_name='file')})
     return '''
     <!doctype html>
-    <title>Upload an excel file</title>
+    <title>Upload an excel file here</title>
     <h1>Excel file upload (csv, tsv, csvz, tsvz only)</h1>
     <form action="" method=post enctype=multipart/form-data><p>
     <input type=file name=file><input type=submit value=Upload>
