@@ -1,18 +1,9 @@
-version: "3"
-services: 
-  web: 
-    image: codebender23/simple-flask-image:latest
-    deploy:
-      replicas: 5
-      resources:
-        limits:
-          cpus: "0.1"
-          memory: "50M"
-      restart_policy:
-        condition: on-failure
-    ports: 
-      - "5000:80"
-    networks: 
-      - webnet
-networks:
-webnet:
+version: '2'
+services:
+    web:
+        image: codebender23/simple-flask-image:latest
+        build: .
+        ports:
+            - "5000:5000"
+        volumes:
+            - .:/code
