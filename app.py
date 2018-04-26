@@ -7,7 +7,7 @@ app = Flask(__name__)
 @app.route("/upload", methods=['GET', 'POST'])
 def upload_file():
     if request.method == 'POST':
-        return jsonify({"result": request.get_dict(field_name='file')})
+        return jsonify({"result": request.get_records(field_name='file')})
     return '''
     <!doctype html>
     <title>Upload an excel file here</title>
@@ -27,13 +27,6 @@ def download_file():
 def export_records():
     return excel.make_response_from_array([[1, 2], [3, 4]], "csv",
                                           file_name="export_data")
-
-
-@app.route("/download_file_named_in_unicode", methods=['GET'])
-def download_file_named_in_unicode():
-    return excel.make_response_from_array([[1, 2], [3, 4]], "csv",
-                                          file_name=u"中文文件名")
-
 
 # insert database related code here
 if __name__ == "__main__":
