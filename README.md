@@ -1,4 +1,4 @@
-PyExcel-Docker is a docker version of the popular [PyExcel] (https://github.com/pyexcel/pyexcel). 
+PyExcel-Docker is a docker version of the popular PyExcel (https://github.com/pyexcel/pyexcel) Application
 
  Assumptions include:
 1. You are proficient in Python 
