@@ -1,12 +1,11 @@
-#H1 PyExcel-Docker
 PyExcel-Docker is a docker version of the popular [PyExcel] (https://github.com/pyexcel/pyexcel). 
 
-#H2 Assumptions
+ Assumptions include:
 1. You are proficient in Python 
 2. You know what Docker is and have used it before. 
 3. You have used PyExcel. 
 
-#H3 How to use PyExcel-Docker 
+ How to use PyExcel-Docker 
 1. Go to the docker hub and pull the Docker image. 
 2. Run the image in your preferred environment by using the following command. 
 
