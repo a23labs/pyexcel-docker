@@ -1,6 +1,8 @@
 # PyExcel-Docker
 
-PyExcel-Docker is a docker version of the popular PyExcel (https://github.com/pyexcel/pyexcel) Application
+PyExcel-Docker is a docker version of the popular PyExcel (https://github.com/pyexcel/pyexcel) Application. This is an implementation of PyExcel with a simple user interface. 
+
+The objective is to convert an excel file into JSON data. 
 
  ## Assumptions 
 
