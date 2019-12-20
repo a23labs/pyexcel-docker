@@ -1,1 +1,1 @@
-TBD 
+web: gunicorn app:app
