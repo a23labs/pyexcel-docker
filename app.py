@@ -17,16 +17,15 @@ def upload_file():
     </form>
     '''
 
-# this route exposes the download functionality for the csv file 
+# TO-DO :This route exposes the download functionality for the csv file 
 @app.route("/download", methods=['GET'])
 def download_file():
-    return excel.make_response_from_array([[1, 2], [3, 4]], "csv")
+    return pass
 
-# this route exposes the export functionality
+# TO-DO :This route exposes the export functionality
 @app.route("/export", methods=['GET'])
 def export_records():
-    return excel.make_response_from_array([[1, 2], [3, 4]], "csv",
-                                          file_name="export_data")
+    return pass
 
 
 if __name__ == "__main__":
