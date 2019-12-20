@@ -17,18 +17,18 @@ def upload_file():
     </form>
     '''
 
-
+# this route exposes the download functionality for the csv file 
 @app.route("/download", methods=['GET'])
 def download_file():
     return excel.make_response_from_array([[1, 2], [3, 4]], "csv")
 
-
+# this route exposes the export functionality
 @app.route("/export", methods=['GET'])
 def export_records():
     return excel.make_response_from_array([[1, 2], [3, 4]], "csv",
                                           file_name="export_data")
 
-# insert database related code here
+
 if __name__ == "__main__":
     excel.init_excel(app)
     app.run(host='0.0.0.0')
