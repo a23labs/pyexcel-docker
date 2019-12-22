@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 import flask_excel as excel
 
 app = Flask(__name__)
+excel.init_excel(app)
 
 
 @app.route("/upload", methods=['GET', 'POST'])
@@ -18,16 +19,15 @@ def upload_file():
     '''
 
 # TO-DO :This route exposes the download functionality for the csv file 
-@app.route("/download", methods=['GET'])
-def download_file():
-    return pass
+# @app.route("/download", methods=['GET'])
+# def download_file():
+#     return pass
 
 # TO-DO :This route exposes the export functionality
-@app.route("/export", methods=['GET'])
-def export_records():
-    return pass
+# @app.route("/export", methods=['GET'])
+# def export_records():
+#     return pass
 
 
 if __name__ == "__main__":
-    excel.init_excel(app)
     app.run(host='0.0.0.0')
