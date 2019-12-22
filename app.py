@@ -18,16 +18,5 @@ def upload_file():
     </form>
     '''
 
-# TO-DO :This route exposes the download functionality for the csv file 
-# @app.route("/download", methods=['GET'])
-# def download_file():
-#     return pass
-
-# TO-DO :This route exposes the export functionality
-# @app.route("/export", methods=['GET'])
-# def export_records():
-#     return pass
-
-
 if __name__ == "__main__":
     app.run(host='0.0.0.0')
