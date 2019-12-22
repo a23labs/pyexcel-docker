@@ -31,6 +31,13 @@ Install and activate your virtual environment
 
 Then navigate to `http://localhost:5000/upload` and upload an excel file. 
 
+
+## Running on Heroku 
+
+This is on assumption that you have a Heroku Account and an existing application
+
+` git push heroku master `
+
 ✌🏾 
 
 Made in 🇺🇬
