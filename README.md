@@ -27,7 +27,7 @@ Install and activate your virtual environment
 
 ## Run 🏃🏾‍♂️
 
-` python app.py ` 
+` flask run` 
 
 Then navigate to `http://localhost:5000/upload` and upload an excel file. 
 
